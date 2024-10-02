@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>San Juan Fitness Pro</title>
+
+    <link rel="icon" href="icon_logo/favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@400;500&family=Anton&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Oswald', sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .carousel {
+            margin: 0;
+            padding: 0;
+            border: none;
+        }
+
+        .carousel-caption {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .carousel-caption h1 {
+            color: #fff;
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.8);
+            font-size: calc(2rem + 2vw);
+            font-family: 'Anton', sans-serif;
+            text-transform: uppercase;
+        }
+
+        .carousel-caption p {
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            font-size: calc(1.2rem + 1vw);
+        }
+
+        .carousel-caption a.btn {
+            background-color: #32b27f;
+            color: #000;
+            border-radius: 30px;
+            padding: 10px 20px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+        }
+
+        .carousel-caption a.btn:hover {
+            background-color: #28a270;
+            color: #fff;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        video {
+            object-fit: cover;
+            width: 100%;
+            height: 100vh;
+        }
+
+        .navbar {
+            background-color: transparent;
+        }
+
+        .navbar-brand {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2rem;
+            color: #32b27f !important;
+        }
+
+        .navbar-nav .nav-link {
+            color: #fff !important;
+            text-transform: uppercase;
+        }
+
+        .navbar-brand img {
+            height: 50px;
+            width: auto;
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            font-family: 'Oswald', sans-serif;
+        }
+
+        @media (max-width: 768px) {
+            .carousel-caption h1 {
+                font-size: calc(1.5rem + 3vw);
+            }
+
+            .carousel-caption p {
+                font-size: calc(1rem + 2vw);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="icon_logo/icon.png" alt="Logo de San Juan Fitness Pro">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="planes.html">Planes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="fitnessCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <video autoplay loop muted>
+                    <source src="media/videos/intro.mp4" type="video/mp4">
+                </video>
+                <div class="carousel-caption">
+                    <h1>Desafía tus límites</h1>
+                    <p>Vos te volvés más fuerte</p>
+                    <a href="contacto.html" class="btn">¡Empezá ahora!</a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <video autoplay loop muted>
+                    <source src="media/videos/fondo_neon.mp4" type="video/mp4">
+                </video>
+                <div class="carousel-caption">
+                    <h1>Entrená con los mejores</h1>
+                    <p>Lográ tu mejor versión</p>
+                    <a href="planes.html" class="btn">¡Ver planes!</a>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#fitnessCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#fitnessCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+        </button>
+    </div>
+
+    <footer>
+        <div class="text-center">
+            &copy; 2024 San Juan Fitness Pro || Todos los Derechos Reservados || Desarrollado por Hernán Montané 👑
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

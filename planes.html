@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>San Juan Fitness Pro - Planes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@400;500&family=Anton&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Oswald', sans-serif;
+            color: #fff;
+            overflow: auto;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        #planes {
+            padding: 100px 0;
+            position: relative;
+            z-index: 1;
+            flex: 1;
+            overflow: auto;
+            min-height: 100vh;
+        }
+
+        .navbar-brand {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2rem;
+            color: #95ff79 !important;
+        }
+
+        .navbar-nav .nav-link {
+            color: #fff !important;
+            text-transform: uppercase;
+        }
+
+        .navbar-brand img {
+            height: 50px;
+            width: auto;
+        }
+
+        #planes-header {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #95ff79;
+            text-transform: uppercase;
+            font-family: 'Anton', sans-serif;
+            font-size: 3rem;
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.8);
+        }
+
+        .card-plan {
+            background-color: rgba(0, 0, 0, 0.7);
+            border: none;
+            color: white;
+            border-radius: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .card-plan img {
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+        }
+
+        .card-plan:hover {
+            transform: translateY(-10px);
+        }
+
+        .card-plan .card-body {
+            padding: 20px;
+        }
+
+        .card-plan h5 {
+            font-family: 'Anton', sans-serif;
+            color: #95ff79;
+            font-size: 1.8rem;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .card-plan p {
+            font-size: 1.15rem;
+            line-height: 1.5;
+        }
+
+        .btn-plan {
+            display: block;
+            width: 100%;
+            text-align: center;
+            font-family: 'Anton', sans-serif;
+            font-size: 1.8rem;
+            text-transform: uppercase;
+            background-color: #95ff79;
+            color: #000;
+            border: none;
+            border-radius: 10px;
+            padding: 10px 0;
+            margin-top: 20px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .btn-plan:hover {
+            background-color: #fff;
+            color: #00ff5f;
+        }
+
+        @media (max-width: 768px) {
+            .card-plan {
+                margin-bottom: 20px;
+            }
+        }
+
+        footer {
+            margin: 0;
+            padding: 20px 0;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 1;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="icon_logo/icon.png" alt="Logo de San Juan Fitness Pro">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="planes.html">Planes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <video id="video-background" autoplay loop muted>
+        <source src="media/videos/lebron_video.mp4" type="video/mp4">
+    </video>
+
+    <section id="planes">
+        <header id="planes-header">Planes</header>
+        <div class="container">
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                    <div class="card card-plan">
+                        <img src="/media/images/card1.png" class="card-img-top" alt="Entrenamiento de Fuerza">
+                        <div class="card-body">
+                            <h5 class="card-title">Fuerza y Nutrición</h5>
+                            <p class="card-text">Mejorá tu fuerza con asesoramiento nutricional y rutinas de entrenamiento para mejorar la masa muscular. Adaptado a todos los niveles, ¡llegá a tu máximo rendimiento!</p>
+                            <button class="btn-plan">CONTRATAR</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card card-plan">
+                        <img src="/media/images/card2.png" class="card-img-top" alt="Entrenamiento de Resistencia">
+                        <div class="card-body">
+                            <h5 class="card-title">Resistencia y Salud</h5>
+                            <p class="card-text">Desarrollá tu resistencia física con sesiones intensivas. Incluye un plan nutricional equilibrado y rutinas de cardio para mantenerte en una muy buena forma y saludable.</p>
+                            <button class="btn-plan">CONTRATAR</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card card-plan">
+                        <img src="/media/images/card3.png" class="card-img-top" alt="Entrenamiento Funcional">
+                        <div class="card-body">
+                            <h5 class="card-title">Entrenamiento Funcional</h5>
+                            <p class="card-text">Tonificá tu cuerpo con nuestro plan funcional. Recibirás asesoramiento en nutrición balanceada y rutinas dinámicas para mejorar tu flexibilidad, fuerza y equilibrio.</p>
+                            <button class="btn-plan">CONTRATAR</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="text-center">
+            &copy; 2024 San Juan Fitness Pro || Todos los Derechos Reservados || Desarrollado por Hernán Montané 👑
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
